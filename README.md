@@ -1,13 +1,13 @@
 # Job Portal REST API
 
-[![CI Pipeline](https://github.com/katlashylaja/jobportal-api/actions/workflows/ci.yml/badge.svg)](https://github.com/katlashylaja/jobportal-api/actions)
-![Python Version](https://img.shields.io/badge/python-3.12%20%7C%203.13-blue.svg)
+[![CI Pipeline](https://github.com/katlashylu-cpu/jobportal-api/actions/workflows/ci.yml/badge.svg)](https://github.com/katlashylu-cpu/jobportal-api/actions)
+![Python Version](https://img.shields.io/badge/python-3.12-blue.svg)
 ![Django Version](https://img.shields.io/badge/django-5.1-green.svg)
 ![DRF Version](https://img.shields.io/badge/DRF-3.15-red.svg)
 ![Coverage](https://img.shields.io/badge/coverage-95%25-brightgreen.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-A production-ready, API-first backend service connecting recruiters who post job openings with candidates who discover and apply to them. Built using **Django**, **Django REST Framework (DRF)**, **SimpleJWT**, **PostgreSQL**, and documented with **drf-spectacular (OpenAPI 3.0 / Swagger UI)**.
+A production-style, API-first backend service connecting recruiters who post job openings with candidates who discover and apply to them. Built using **Django**, **Django REST Framework (DRF)**, **SimpleJWT**, **PostgreSQL**, and documented with **drf-spectacular (OpenAPI 3.0 / Swagger UI)**.
 
 ---
 
@@ -57,7 +57,7 @@ flowchart TD
 - **Interactive Documentation**:
   - Swagger UI served at `/api/docs/` and raw OpenAPI 3.0 schema at `/api/schema/`.
 - **Production DevOps**:
-  - Multi-stage Docker containerization with non-root security.
+  - Docker containerization with non-root security.
   - `docker-compose.yml` with health-checked PostgreSQL 16.
   - GitHub Actions CI enforcing code quality (`ruff`) and test coverage ($\ge$ 70%).
 
@@ -67,7 +67,7 @@ flowchart TD
 
 | Layer | Technology |
 |---|---|
-| **Language** | Python 3.12 / 3.13 |
+| **Language** | Python 3.12 |
 | **Framework** | Django 5.1, Django REST Framework 3.15 |
 | **Authentication** | djangorestframework-simplejwt (JWT) |
 | **Database** | PostgreSQL 16 (production/docker), SQLite (local fallback) |
@@ -164,7 +164,7 @@ Common status codes:
 
 ### 1. Clone & Setup Environment
 ```bash
-git clone https://github.com/katlashylaja/jobportal-api.git
+git clone https://github.com/katlashylu-cpu/jobportal-api.git
 cd jobportal-api
 
 # Create and activate virtual environment
@@ -223,7 +223,7 @@ pytest
 ```
 Expected output:
 ```text
-======================= 54 passed in 25.4s =======================
+======================= 54 passed =======================
 TOTAL Coverage: 95.46% (Threshold: 70%)
 ```
 
