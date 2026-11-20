@@ -24,7 +24,7 @@ COPY . .
 
 # Create media and static directories and set non-root permissions
 RUN mkdir -p /app/staticfiles /app/media && \
-    useradd -u 8888 appuser && \
+    useradd -u 8888 -m appuser && \
     chown -R appuser:appuser /app
 
 USER appuser
