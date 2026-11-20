@@ -157,7 +157,7 @@ SIMPLE_JWT = {
 # drf-spectacular Settings
 SPECTACULAR_SETTINGS = {
     'TITLE': 'Job Portal REST API',
-    'DESCRIPTION': 'Production-ready Job Portal REST API backend with role-based access control, job search, and application lifecycle management.',
+    'DESCRIPTION': 'Job Portal REST API backend with role-based access control, job search, and application lifecycle management.',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
     'COMPONENT_SPLIT_REQUEST': True,

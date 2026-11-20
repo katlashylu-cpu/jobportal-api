@@ -5,6 +5,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
+from django.views.generic import RedirectView
 from drf_spectacular.views import (
     SpectacularAPIView,
     SpectacularRedocView,
@@ -14,6 +15,7 @@ from drf_spectacular.views import (
 from core.views import HealthCheckView
 
 urlpatterns = [
+    path('', RedirectView.as_view(url='/api/docs/', permanent=False)),
     path('admin/', admin.site.urls),
 
     # API Documentation (Swagger & OpenAPI Schema)
