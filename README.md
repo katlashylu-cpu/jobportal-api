@@ -9,6 +9,13 @@
 
 A production-style, API-first backend service connecting recruiters who post job openings with candidates who discover and apply to them. Built using **Django**, **Django REST Framework (DRF)**, **SimpleJWT**, **PostgreSQL**, and documented with **drf-spectacular (OpenAPI 3.0 / Swagger UI)**.
 
+## Live Demo
+
+- **Swagger UI:** https://jobportal-api-2ipb.onrender.com/api/docs/
+- **Health check:** https://jobportal-api-2ipb.onrender.com/api/v1/health/
+
+Hosted on Render (Docker, free tier) with a Neon PostgreSQL database. The first request after inactivity can take 50 seconds or more while the instance wakes up.
+
 ---
 
 ## 🌟 Architecture Overview
@@ -160,6 +167,12 @@ Common status codes:
 
 ---
 
+## Known Limitations
+
+- **Resume storage is not persistent yet.** Uploaded PDFs are saved on the container disk, which is wiped on every redeploy, and download links do not work in production (`DEBUG=False`). Planned: Cloudinary or S3.
+- **Free-tier hosting.** The live instance sleeps after inactivity, so the first request can take 50 seconds or more.
+- **Login uses username and password**, not email.
+
 ## ⚡ Quickstart & Local Setup
 
 ### 1. Clone & Setup Environment
@@ -206,6 +219,8 @@ Visit the Swagger UI documentation at: `http://127.0.0.1:8000/api/docs/`
 ---
 
 ## 🐳 Docker Setup
+
+> **Status:** this Dockerfile builds and runs on Render (the live deployment uses it). The docker-compose setup has not been tested locally yet.
 
 Run the entire application stack (API + PostgreSQL 16) with a single command:
 ```bash
